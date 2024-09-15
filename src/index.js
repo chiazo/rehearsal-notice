@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 import { Header, Socials, Footer } from "./components";
 import App from "./App";
@@ -10,7 +10,7 @@ import "./index.css";
 
 const Index = () => (
   <div className="main">
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <div>
         <Route exact path="/" component={App} />
@@ -18,7 +18,7 @@ const Index = () => (
       </div>
       <Socials />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   </div>
 );
 

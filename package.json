@@ -2,7 +2,7 @@
   "name": "rehearsal-notice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://chiazo.github.io/rehearsal-notice",
+  "homepage": "https://chiazo.github.io/rehearsal-notice",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
