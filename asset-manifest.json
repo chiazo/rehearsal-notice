@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rehearsal-notice/static/css/main.435acc31.css",
+    "main.js": "/rehearsal-notice/static/js/main.19bf9234.js",
+    "static/media/me.png": "/rehearsal-notice/static/media/me.4f32f6c33efa6cd0ec66.png",
+    "index.html": "/rehearsal-notice/index.html",
+    "main.435acc31.css.map": "/rehearsal-notice/static/css/main.435acc31.css.map",
+    "main.19bf9234.js.map": "/rehearsal-notice/static/js/main.19bf9234.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.435acc31.css",
+    "static/js/main.19bf9234.js"
+  ]
+}
