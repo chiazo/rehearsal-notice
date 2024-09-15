@@ -13,7 +13,6 @@ button,
   display: inline-block;
   text-decoration: none;
   font-size: 1rem;
-  /* if you change the font, don't forget to change it here too! */
   font-family: "Lilita One", sans-serif;
   padding: 0.6rem 1.2rem;
   vertical-align: middle;
@@ -45,7 +44,6 @@ button:hover {
   box-sizing: border-box;
 }
 
-/*F0D179  */
 html {
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
@@ -55,7 +53,6 @@ html {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   scroll-behavior: smooth;
-  box-sizing: border-box;
   font-size: 18px;
   background-color: #BDCBFE;
 }
@@ -64,17 +61,12 @@ div {
   margin-bottom: 1rem;
 }
 
-/* body */
-
 body {
   box-sizing: border-box;
   min-height: 100%;
 }
 
-/* Anchors */
 a {
-  /* border-bottom: 2px solid #7955D3; */
-  /* color: #456ffc; */
   font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
@@ -86,8 +78,6 @@ a:hover {
   padding: .4rem;
 }
 
-/* paragraph */
-/* == HEADERS == #B2C4FF */ 
 h1,
 h2,
 h3,
@@ -117,7 +107,6 @@ h4 {
   align-items: center;
 }
 
-/**/
 .wrapper,
 .container {
   max-width: 1200px;
@@ -249,4 +238,97 @@ blockquote {
   color: #eee;
   background-color: #6689fa;
   padding: 1rem;
+}
+
+/* == MOBILE SPECIFIC ADJUSTMENTS == */
+@media (max-width: 700px) {
+  html {
+    font-size: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  h2, h3, h4 {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .wrapper,
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .main {
+    margin: 1rem;
+  }
+
+  .masthead {
+    margin: 1rem 0;
+  }
+
+  .hof {
+    display: block;
+  }
+
+      /* Center the content of the .music div */
+  .music {
+    display: flex;
+    justify-content: center; /* Horizontally center the iframe */
+    align-items: center;     /* Vertically center the iframe */
+    flex-direction: column;  /* Ensure the iframe is stacked properly if there's more content */
+    margin: 0 auto;
+  }
+
+  /* Ensure iframe takes up full width */
+  iframe {
+    margin-top: 1rem;
+    width: 100%;
+  }
+    /* Social icons in a 2-column grid */
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 per row */
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      margin: auto;
+    }
+
+
+  .me {
+    width: 50%;
+    height: 200px;              /* Set a fixed height */
+    object-fit: cover;          /* Ensure the image covers the area without distortion */
+    object-position: bottom;  
+  
+  }
+
+  @media (max-width: 600px) { 
+
+  .me {
+    width: 70%;
+    height: 200px;              /* Set a fixed height */
+    object-fit: cover;          /* Ensure the image covers the area without distortion */
+    object-position: bottom;  
+  
+  }
+  }
 }
