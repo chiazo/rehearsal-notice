@@ -54,7 +54,7 @@ html {
   padding-right: 1.5rem;
   scroll-behavior: smooth;
   font-size: 18px;
-  background-color: #BDCBFE;
+  background-image: linear-gradient(#e2e4ff, #c4c7fb);
 }
 
 div {
@@ -83,7 +83,7 @@ h2,
 h3,
 h4 {
   color: #456ffc;
-  text-shadow: 2px 4px 6px #B2C4FF;
+  text-shadow: 4px 4px 16px #B2C4FF;
   font-family: "Lilita One", sans-serif;
   letter-spacing: .3rem;
   text-align: center;
@@ -92,7 +92,7 @@ h4 {
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 4rem;
   text-shadow: 2px 2px 2px #eee;
   margin: 1rem 1rem 1rem 0;
 }
@@ -156,6 +156,7 @@ h4 {
   background-color: #6688fabb;
   border: 3px solid #6688fabb;
   text-shadow: 1px 3px 4px #456ffc;
+  box-shadow: 5px 5px 10px #456ffc;
   height: 2.5rem;
   margin-top: 1rem;
   padding: .3rem;
@@ -171,6 +172,7 @@ h4 {
   justify-content: center;
   background-color: #6688fabb;
   border: 3px solid #6688fabb;
+  box-shadow: 5px 5px 10px #456ffc;
   text-shadow: 1px 3px 4px #456ffc;
   align-items: center;
   gap: 1rem;
@@ -201,8 +203,8 @@ iframe {
 
 .social-icon {
   border-radius: 50%;
-  box-shadow: 2px 2px 3px #d6d15286;
   border: 2px solid #0840f686;
+  box-shadow: 2px 2px 5px #456ffc;
 }
 
 .social-svg-icon {
@@ -215,9 +217,9 @@ iframe {
 .me {
   width: 20rem;
   height: 20rem;
-  border-left: 3px solid #6688fabb;
-  box-shadow: 0px 5px 5px -5px #083ff6;
-  border-bottom: 3px solid #6688fabb;
+  /* border-left: 3px solid #6688fabb; */
+  border: 3px solid #6688fabb;
+  box-shadow: 5px 5px 10px #456ffc;
 }
 
 .hof>div {
@@ -249,7 +251,7 @@ blockquote {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0.5rem 0;
   }
 
@@ -312,23 +314,23 @@ blockquote {
       margin: auto;
     }
 
-
   .me {
-    width: 50%;
+    /* width: 50%;
     height: 200px;              /* Set a fixed height */
-    object-fit: cover;          /* Ensure the image covers the area without distortion */
-    object-position: bottom;  
+    /* object-fit: cover;          Ensure the image covers the area without distortion */
+    /* object-position: bottom;   */ 
+    display: none;
   
   }
 
   @media (max-width: 600px) { 
 
   .me {
-    width: 70%;
+    /* width: 70%;
     height: 200px;              /* Set a fixed height */
-    object-fit: cover;          /* Ensure the image covers the area without distortion */
-    object-position: bottom;  
-  
+    /* object-fit: cover;          Ensure the image covers the area without distortion */
+    /* object-position: bottom;   */
+    display: none;
   }
   }
 }
