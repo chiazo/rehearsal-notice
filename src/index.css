@@ -54,7 +54,12 @@ html {
   padding-right: 1.5rem;
   scroll-behavior: smooth;
   font-size: 18px;
-  background-image: linear-gradient(#e2e4ff, #c4c7fb);
+  background-image: url("data/images/theme.JPEG");
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-color: linear-gradient(#e2e4ff, #c4c7fb);
 }
 
 div {
@@ -93,8 +98,10 @@ h4 {
 
 h1 {
   font-size: 4rem;
-  text-shadow: 2px 2px 2px #eee;
+  color: #B2C4FF;
+  text-shadow: 2px 2px 2px #456ffc;
   margin: 1rem 1rem 1rem 0;
+  background-color: #285aff4d;
 }
 
 h4 {
@@ -153,10 +160,10 @@ h4 {
   font-family: "Lilita One", sans-serif;
   height: 200px;
   color: #eee;
-  background-color: #6688fabb;
-  border: 3px solid #6688fabb;
+  background-image: linear-gradient(#6688fabb);
+  /* border-bottom: 3px solid #6688fabb; */
   text-shadow: 1px 3px 4px #456ffc;
-  box-shadow: 5px 5px 10px #456ffc;
+  box-shadow: 15px 5px -5px #456ffc;
   height: 2.5rem;
   margin-top: 1rem;
   padding: .3rem;
@@ -170,9 +177,9 @@ h4 {
 .nav-links {
   display: flex;
   justify-content: center;
-  background-color: #6688fabb;
-  border: 3px solid #6688fabb;
-  box-shadow: 5px 5px 10px #456ffc;
+  /* background-color: #6688fabb; */
+  /* border-bottom: 3px solid #6688fabb; */
+  /* box-shadow: 5px 5px 10px #456ffc; */
   text-shadow: 1px 3px 4px #456ffc;
   align-items: center;
   gap: 1rem;
@@ -211,7 +218,7 @@ iframe {
   fill: #eee !important;
 }
 .social-svg-mask {
-  fill: #DE3544 !important;
+  fill: #87a2fa !important;
 }
 
 .me {
