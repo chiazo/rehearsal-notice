@@ -52,6 +52,7 @@ html {
   line-height: 1.4;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  color: #eee;
   scroll-behavior: smooth;
   font-size: 18px;
   background-image: url("data/images/theme.JPEG");
