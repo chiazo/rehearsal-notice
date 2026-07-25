@@ -26,12 +26,6 @@ button,
   margin-top: 10px;
 }
 
-[type="button"]:hover,
-[type="submit"]:hover,
-button:hover {
-  background-color: white;
-}
-
 .buttons {
   text-align: justify;
 }
@@ -42,6 +36,45 @@ button:hover {
 *:after {
   box-sizing: inherit;
   box-sizing: border-box;
+}
+
+.content {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+iframe {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+}
+
+.pre-save-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.pre-save {
+  color: #eee;
+  background-color: #6689fa;
+  padding: 1rem;
 }
 
 html {
@@ -78,10 +111,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.header a:hover {
   background-color: #edf1fea9;
   box-shadow: 3px 2px 3px #285aff9e;
-  padding: .4rem;
+  padding: 0.4rem;
 }
 
 h1,
@@ -89,9 +122,9 @@ h2,
 h3,
 h4 {
   color: #456ffc;
-  text-shadow: 4px 4px 16px #B2C4FF;
+  text-shadow: 4px 4px 16px #b2c4ff;
   font-family: "Lilita One", sans-serif;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   text-align: center;
   margin-top: 2rem;
   line-height: 1.2;
@@ -99,7 +132,7 @@ h4 {
 
 h1 {
   font-size: 4rem;
-  color: #B2C4FF;
+  color: #b2c4ff;
   text-shadow: 2px 2px 2px #456ffc;
   margin: 1rem 1rem 1rem 0;
   background-color: #285aff4d;
@@ -111,8 +144,11 @@ h4 {
 
 .content {
   display: flex;
+  flex-direction: row;
+  /* keep side-by-side */
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .wrapper,
@@ -167,7 +203,7 @@ h4 {
   box-shadow: 15px 5px -5px #456ffc;
   height: 2.5rem;
   margin-top: 1rem;
-  padding: .3rem;
+  padding: 0.3rem;
   text-align: center;
 }
 
@@ -196,11 +232,6 @@ h4 {
   flex-wrap: wrap;
 }
 
-iframe {
-  border: 3px solid #6688fabb;
-  box-shadow: 5px 5px 10px #456ffc;
-}
-
 .socials {
   display: flex;
   justify-content: center;
@@ -224,13 +255,13 @@ iframe {
 
 .me {
   width: 20rem;
-  height: 20rem;
+  /* height: 20rem; */
   /* border-left: 3px solid #6688fabb; */
   border: 3px solid #6688fabb;
   box-shadow: 5px 5px 10px #456ffc;
 }
 
-.hof>div {
+.hof > div {
   margin: 3rem;
   padding: 2rem;
   border: 1px solid #285aff;
@@ -263,7 +294,9 @@ blockquote {
     margin: 0.5rem 0;
   }
 
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     font-size: 1.5rem;
   }
 
@@ -294,51 +327,68 @@ blockquote {
     display: block;
   }
 
-      /* Center the content of the .music div */
+  /* Center the content of the .music div */
   .music {
     display: flex;
-    justify-content: center; /* Horizontally center the iframe */
-    align-items: center;     /* Vertically center the iframe */
-    flex-direction: column;  /* Ensure the iframe is stacked properly if there's more content */
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-width: 300px;
+    /* fixed width — gives centering something to work with */
+    flex-shrink: 0;
+    /* prevents it from being squeezed by the image */
   }
 
-  /* Ensure iframe takes up full width */
   iframe {
     margin-top: 1rem;
     width: 100%;
+    /* now 100% of the 400px box, not the whole page */
+    max-width: 500px;
+    height: 352px;
   }
-    /* Social icons in a 2-column grid */
-    .socials {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 per row */
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .social-icon {
-      width: 50px;
-      height: 50px;
-      margin: auto;
-    }
+
+  .pre-save-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    text-decoration: none;
+  }
+
+  .pre-save {
+    color: #eee;
+    background-color: #6689fa;
+    padding: 1rem;
+  }
+  /* Social icons in a 2-column grid */
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+  }
 
   .me {
     /* width: 50%;
     height: 200px;              /* Set a fixed height */
     /* object-fit: cover;          Ensure the image covers the area without distortion */
-    /* object-position: bottom;   */ 
-    display: none;
-  
-  }
-
-  @media (max-width: 600px) { 
-
-  .me {
-    /* width: 70%;
-    height: 200px;              /* Set a fixed height */
-    /* object-fit: cover;          Ensure the image covers the area without distortion */
     /* object-position: bottom;   */
     display: none;
   }
+
+  @media (max-width: 600px) {
+    .me {
+      /* width: 70%;
+    height: 200px;              /* Set a fixed height */
+      /* object-fit: cover;          Ensure the image covers the area without distortion */
+      /* object-position: bottom;   */
+      display: none;
+    }
   }
 }

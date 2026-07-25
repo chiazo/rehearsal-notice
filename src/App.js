@@ -1,4 +1,4 @@
-import me from "./data/images/me.png";
+import me from "./data/images/me.JPG";
 
 const App = () => {
   return (
@@ -8,11 +8,24 @@ const App = () => {
         <div className="music">
           <>
             <iframe
-              title="soundcloud"
+              data-testid="embed-iframe"
+              title="spotify"
+              src="https://open.spotify.com/embed/track/79bE4XABQ0ywRpU3ij7NXy?utm_source=generator&theme=0&si=003585f15fd84686"
               width="100%"
-              height="450"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/757009434&color=%2350366a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              height="300" // increase height here, not in CSS
+              frameBorder="0"
+              allowFullScreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
             ></iframe>
+            <a
+              href="https://artists.landr.com/991048256521"
+              target="_blank"
+              rel="noreferrer"
+              className="pre-save-link"
+            >
+              <button className="pre-save"> Listen on other platforms!</button>
+            </a>
             <div
               style={{
                 fontSize: "10px",
